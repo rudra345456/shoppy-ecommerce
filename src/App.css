@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.bg-blue {
+  background: #1e0280ec;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Header styles */
+.headerWrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.headerWrapper .top-strip {
+  padding: 8px 0;
+  color: #fcf9f9;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.headerWrapper .header {
+  width: 100%;
+  height: 150px;
+  padding: 5px 0;
+}
+
+.logoWrapper img {
+  width: 100%;
+}
+
+/* Country dropdown styles */
+.headerWrapper .header .part2 .countryDrop {
+  width: 150px;
+  height: 60px;
+  min-width: 150px;
+  color: black !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  border-radius: 7px !important;
+  padding: 10px !important;
+  text-align: left;
+  justify-content: flex-start !important;
+}
+
+.headerWrapper .header .part2 .countryDrop .label {
+  font-size: 12px !important;
+  text-transform: capitalize !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  line-height: 16px;
+}
+
+.headerWrapper .header .part2 .countryDrop .name {
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  color: rgba(12, 31, 85, 0.8) !important;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.headerWrapper .header .part2 .countryDrop span.ml-auto svg {
+  opacity: 0.7;
+}
+
+/* Search bar styles */
+.headerSearch {
+  width: 550px;
+  height: 61px;
+  background: #fcf9f9;
+  padding: 5px;
+  background-size: 250% !important;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.headerSearch input {
+  background: transparent !important;
+  outline: none;
+  font-size: 18px;
+  color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 45px;
+  border: none !important;
+  padding: 0 20px !important;
+}
+
+.headerSearch button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 100;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 45px !important;
+  border-radius: 50% !important;
+  color: black;
+}
+
+.headerSearch button svg {
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+/* Header icons styles */
+header .part3 .circle {
+  align-items: center;
+  justify-content: center;
+  min-width: 45px !important;
+  height: 45px !important;
+  width: 45px !important;
+  border-radius: 45px !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  color: black;
+}
+
+header .part3 .circle svg {
+  font-size: 20px;
+}
+
+/* Cart styles */
+.carttab .price {
+  font-size: 18px;
+  color: rgba(0,0,0,0.8);
+  font-weight: 700;
+}
+
+.carttab button {
+  background: #fff1ee !important;
+}
+
+.carttab button svg {
+  color: #ea2b0f;
+}
+
+.carttab .count {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  background: #ea2b0f;
+  border-radius: 50%;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+/* Location modal styles */
+.LocationModal .MuiPaper-elevation {
+  padding: 1%;
+  position: relative;
+}
+
+.LocationModal .CountryList {
+  margin-bottom: 0;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.LocationModal .CountryList li {
+  width: 100%;
+  list-style: none;
+}
+
+.LocationModal .CountryList li button {
+  width: 100%;
+  text-transform: capitalize !important;
+  color: #000 !important;
+  justify-content: flex-start !important;
+  padding: 10px 20px !important;
+}
+
+.LocationModal .CountryList li button .active {
+  background: #e2e2e2 !important;
+}
+
+.LocationModal .close_ {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #000 !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.LocationModal .close_ svg {
+  font-size: 22px;
+}
+
+/* Navigation styles */
+nav .navPart1 {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+
+nav .navPart2 {
+  max-width: 80%;
+  flex: 0 0 80%;
+}
+
+nav .catwrapper {
+  position: relative;
+}
+
+nav .catwrapper:hover .sidebarNav {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+nav .navPart1 .sidebarNav {
+  position: absolute;
+  top: 151%;
+  left: 0;
+  background: white;
+  width: 250px;
+  border: 1px solid rgba(0,0,0,0.1);
+  z-index: 999;
+  padding: 10px;
+  transition: all 0.2s;
+}
+
+nav .sidebarNav ul li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+nav.navPart1 .sidebarNav .open {
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+}
+
+nav .sidebarNav ul li button {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  text-transform: capitalize;
+  color: #000;
+}
+
+nav .sidebarNav ul li button svg {
+  font-size: 40px;
+}
+
+nav .sidebarNav ul li a button:hover {
+  background: transparent;
+  color: #1e0280;
+}
+
+nav .sidebarNav ul li {
+  position: relative;
+}
+
+nav .sidebarNav ul li .submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 999;
+  height: 100%;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+nav .sidebarNav ul li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Category tab styles */
+nav .allcatTab {
+  background: #2bbef9;
+  padding: 15px 25px !important;
+  border-radius: 30px !important;
+}
+
+nav .allcatTab * {
+  color: #fff;
+}
+
+nav .allcatTab .text {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+nav .allcatTab .icon1 svg,
+nav .allcatTab .icon2 svg {
+  font-size: 20px !important;
+}
+
+/* Navigation menu styles */
+nav .navPart2 ul li a button {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(0,0,0,0.7);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 10px 13px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav .navPart2 ul li a:hover {
+  background: #f0faff;
+  color: #2bbef9;
+  border-radius: 25px;
+}
+
+nav .navPart2 ul li a svg {
+  font-size: 20px;
+}
+
+/* Dropdown menu styles */
+nav .navPart2 ul li {
+  position: relative;
+  padding: 10px;
+}
+
+nav .navPart2 ul li .submenu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  min-width: 200px;
+  background: #ffffff;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav .navPart2 ul li:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: inherit;
+  top: 100%;
+}
+
+nav .navPart2 ul li .submenu a {
+  display: block;
+  width: 100%;
+}
+
+nav .navPart2 ul li .submenu a button {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 0;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+nav .navPart2 ul li .submenu a button:hover {
+  background-color: #f4f4f4;
+  color: #1e0280;
+}
+
+/* Banner section styles */
+.homeBannerSection {
+  position: relative;
+  overflow: hidden;
+  outline: none !important;
+}
+
+.homeBannerSection .slick-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  font-weight: bold;
+}
+
+.homeBannerSection .slick-arrow.slick-next {
+  right: 25px;
+}
+
+.homeBannerSection .slick-arrow.slick-prev {
+  left: 25px;
+}
+
+/* Modern button styles */
+button, .btn {
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  outline: none;
+  margin: 4px 0;
+}
+button:hover, .btn:hover {
+  background: #f90;
+  color: #232f3e;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+button:active, .btn:active {
+  background: #e68a00;
+}
+
+/* Modern form input styles */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 0 2px #ffe0b2;
+}
+
+/* Label styling */
+label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+  color: #232f3e;
+}
+
+/* Submit button special style */
+button[type="submit"], .btn-primary {
+  background: #232f3e;
+  color: #fff;
+}
+button[type="submit"]:hover, .btn-primary:hover {
+  background: #ff9900;
+  color: #232f3e;
+}
+
+/* Product card hover effect */
+.card.h-100, .card.product-card {
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.card.h-100:hover, .card.product-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px) scale(1.03);
+  z-index: 2;
+}
+
+/* Badge styles */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff9900;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 3;
+}
+.product-badge.best {
+  background: #232f3e;
+}
+
+/* Cart item hover effect */
+.cart-item-hover {
+  transition: background 0.2s;
+}
+.cart-item-hover:hover {
+  background: #fff8e1;
+}
